@@ -1,10 +1,12 @@
 ﻿using System.Data;
 using ApiFuncional.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace ApiFuncional.Data
 {
-    public class ApiDbContext:DbContext
+    public class ApiDbContext:IdentityDbContext
     {
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
